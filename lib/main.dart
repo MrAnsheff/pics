@@ -1,13 +1,21 @@
-// Импортируем вспомогательную библиотеку из Flutter
-// Для вывода контента на экран
 import 'package:flutter/material.dart';
 
-// Определим "main" функцию которая запуститься когда стартует приложение
+
 void main() {
-// Создадим новый виджет который выведет текст на экран
+
   var app = MaterialApp(
-    home: Text('Моё первое приложение!'),
+    home: Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.done_outline),
+        onPressed: (){
+          print('Hi there!');
+        },
+      ),
+      appBar: AppBar(
+        title: Text('Давайте посмотрим картинки!')
+      ),
+    ),
   );
-// Возьмём этот виджет и выведем на экран
+
 runApp(app);
 }
