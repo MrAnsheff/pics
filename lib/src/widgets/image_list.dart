@@ -17,22 +17,22 @@ class ImageList extends StatelessWidget {
 
   Widget buildImage(image) {
     return Container(
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+      ),
+      padding: EdgeInsets.all(20.0),
+      margin: EdgeInsets.all(20.0),
+      child: Column(
+        children: <Widget>[
+          Padding(
+            child: Image.network(image.url),
+            padding: EdgeInsets.only(
+              bottom: 10.0,
+            ),
           ),
-          padding: EdgeInsets.all(20.0),
-          margin: EdgeInsets.all(20.0),
-          child: Column(
-            children: <Widget>[
-              Padding(
-                child: Image.network(image.url),
-                padding: EdgeInsets.only(
-                  bottom: 10.0,
-                ),
-              ),
-              Text(image.title),
-            ],
-          ),
-        );
+          Text(image.title),
+        ],
+      ),
+    );
   }
 }
